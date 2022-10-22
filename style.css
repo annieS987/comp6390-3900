@@ -1,0 +1,186 @@
+/*-------------------------------------------Portfolio---------------------------------------------*/
+/*-- Format Part Four "Photography" including images and style --*/
+
+#title{
+    height: 560px;
+    width: 100%;
+    background-color: #bb9d7b;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#title p{
+    color: white;
+    font-family: Arial;
+    font-size: 60px;
+    font-weight: bold;
+}
+#photography{
+    position: relative;
+	width: 100%;
+	height: 1580px;
+    background-color: #e2ccb4;
+}
+#photography h1{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center; 
+    padding-top: 90px;
+}
+#photography_menu{
+    position: absolute;
+	margin-top: 100px;
+	padding-left: 13.4%;
+
+}
+#photography_menu ul {
+	margin: 0;
+    padding: 0;
+	list-style-type: none;
+}
+/*-- format the list items so that they display across the page instead of in a vertical list --*/
+#photography_menu li{
+	display: inline;
+	padding-left: 180px;
+}
+#photography_menu button{position: absolute;
+	width: 140px;
+	height: 36px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: Ariel, sans-serif;
+	border: 2px solid black;
+	background-color: white;
+
+}
+/*-- Button event --*/
+#photography_menu button:hover{
+	color: white;
+	border: 2px solid #9f9387;
+	background-color: #9f9387;
+	cursor: pointer;
+}
+
+
+/*--------------------------- format used in Javascript -------------------------*/
+*{
+    padding:0;
+    --imageWidth:810px;
+    --arrowWidth:100px;
+    --height:540px;
+}
+.clear {
+    clear:both;
+}
+#banner {
+    width:calc(1080px + var(--arrowWidth)*2);
+    position: absolute;
+    margin-top: 200px;
+	left: 18%;
+}
+#container {
+    position:relative;
+    width:1080px;
+    height:675px;
+    overflow: hidden;
+}
+#buttons {
+	position:absolute;
+    right:30px;
+    bottom:10px;
+    z-index: 2;
+}
+#buttons ul {
+	list-style: none;
+}
+/*-- format the list items so that they display across the page instead of in a vertical list --*/
+#buttons li {
+    float:left;
+    margin-right:15px;
+    width:10px;
+    height:10px;
+    border-radius: 100%;
+    background-color:rgb(240, 240, 240);
+    list-style: none;
+}
+/*-- Image formatting --*/
+.images {
+    position:absolute;
+    left:0;
+    top:0;
+    z-index: 1;
+    width:calc(1080px *6);
+    height: 675px;
+    transition: 1s;
+}
+.images ul, li{
+	list-style: none;
+}
+.images img {
+    float:left;
+    width:1080px;
+    height: 675px;;
+}
+/*-- Arrows formatting --*/
+#arrow-right,#arrow-left {
+    cursor:pointer;
+    position: absolute;
+    top:50%;
+    margin-top:-20px;
+    height:40px;
+    z-index: 3;
+    opacity: 50%;
+    display:none;
+}
+#arrow-right {
+right:0;
+}
+#arrow-left {
+left:0;
+}
+
+/*---------------- Like Function ---------------*/
+/*-- Div event --*/
+#like:hover{cursor: pointer;
+}
+.like1{
+    position: absolute;
+    bottom: 50px;
+	right: 430px; 
+	width: 50px;
+	height: 50px;
+	border: none;
+	background-size: 50px;
+	background-image: url("./images/like_icon1.png");
+	background-repeat: no-repeat;
+}
+.like2{
+    position: absolute;
+    bottom: 50px;
+	right: 430px; 
+	width: 50px;
+	height: 50px;
+	border: none;
+	background-size: 50px;
+    background-image: url("./images/like_icon2.png");
+    background-repeat: no-repeat;
+}
+
+/*---------------- Download Function ---------------*/
+#save:hover{
+    cursor: pointer;
+    background-image: url("./images/save_icon3.png");
+}
+.save{
+    position: absolute;
+    bottom: 57px;
+	right: 360px; 
+	width: 36px;
+	height: 36px;
+	border: none;
+	background-size: 36px;
+	background-image: url("./images/save_icon1.png");
+	background-repeat: no-repeat;
+}

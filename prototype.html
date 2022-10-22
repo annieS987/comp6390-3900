@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<!-- This tag opens "portfolio" html -->
+
+<html lang="en">
+
+<!-- This is the HEADER section.......................... -->
+
+<head>
+	<meta charset="utf-8">
+    <title>Portfolio</title>
+    <meta name="description" content="4.3.2">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<!-- This is the BODY section............................ -->  
+
+<body>
+  
+
+<!-- Add a div tag named "photography" representing Part Four "photography" .....................-->
+
+    <div id="photography">    
+        <div id="title">
+            <p>WALLPAPER GALLERY</p>
+        </div>
+
+<!-- Add a div tag named "photography_menu" representing "photography menu" -->  
+
+      <div id="photography_menu">
+        <ul>
+          <li><button id="btn1" type="button">Nature</button></li>
+          <li><button id="btn2" type="button">Sports</button></li>
+          <li><button id="btn3" type="button">Food</button></li>
+          <li><button id="btn4" type="button">Pets</button></li>
+          <li><button id="btn5" type="button">TV shows</button></li>
+        </ul>
+      </div>
+
+<!-- Add a photo gallery -->
+
+      <div id="banner">
+       <div id="container">
+        <img src="images/left_arrow.jpg" id="arrow-left" alt="left arrow">
+        <img src="images/right_arrow.jpg" id="arrow-right" alt="right arrow">
+
+        <ul id="buttons">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+
+<!-- Add a list for images of "Nature" -->
+
+        <ul id="images1" class="images" style="display: block;">
+          <li><img src="pics/1.png" alt="Nature image1"></li>
+          <li><img src="pics/2.png" alt="Nature image2"></li>
+          <li><img src="pics/3.png" alt="Nature image3"></li>
+          <li><img src="pics/4.png" alt="Nature image4"></li>
+          <li><img src="pics/5.png" alt="Nature image5"></li>
+          <li><img src="pics/6.png" alt="Nature image6"></li>
+        </ul>
+        
+<!-- Add a list for images of "Sports" -->
+
+        <ul id="images2" class="images" style="display: none;">
+          <li><img src="pics/7.png" alt="Sports image1"></li>
+          <li><img src="pics/8.png" alt="Sports image2"></li>
+          <li><img src="pics/9.png" alt="Sports image3"></li>
+          <li><img src="pics/10.png" alt="Sports image4"></li>
+          <li><img src="pics/11.png" alt="Sports image5"></li>
+          <li><img src="pics/12.png" alt="Sports image6"></li>
+        </ul>
+
+<!-- Add a list for images of "Food" -->
+
+        <ul id="images3" class="images" style="display: none;">
+          <li><img src="pics/13.png" alt="Food image1"></li>
+          <li><img src="pics/14.png" alt="Food image2"></li>
+          <li><img src="pics/15.png" alt="Food image3"></li>
+          <li><img src="pics/16.png" alt="Food image4"></li>
+          <li><img src="pics/17.png" alt="Food image5"></li>
+          <li><img src="pics/18.png" alt="Food image6"></li>
+        </ul>
+
+<!-- Add a list for images of "Pets" -->
+
+        <ul id="images4" class="images" style="display: none;">
+          <li><img src="pics/19.png" alt="Pets image1"></li>
+          <li><img src="pics/20.png" alt="Pets image2"></li>
+          <li><img src="pics/21.png" alt="Pets image3"></li>
+          <li><img src="pics/22.png" alt="Pets image4"></li>
+          <li><img src="pics/23.png" alt="Pets image5"></li>
+          <li><img src="pics/24.png" alt="Pets image6"></li>
+        </ul>
+
+<!-- Add a list for images of "TV shows" -->
+        <ul id="images5" class="images" style="display: none;">
+            <li><img src="pics/25.png" alt="TV shows image1"></li>
+            <li><img src="pics/26.png" alt="TV shows image2"></li>
+            <li><img src="pics/27.png" alt="TV shows image3"></li>
+            <li><img src="pics/28.png" alt="TV shows image4"></li>
+            <li><img src="pics/29.png" alt="TV shows image5"></li>
+            <li><img src="pics/30.png" alt="TV shows image6"></li>
+        </ul>        
+  
+       </div>
+      </div>
+<!-- Add like button -->
+
+      <div id="like" class="like1"></div>
+      <div id="save" class="save"></div>
+
+   </div>
+
+   
+
+<!-- JS code for photo gallery.............................. -->
+
+<script>
+var id = "btn1";
+var img = "images1";
+var multiImages = document.getElementById(img);
+
+//add a button event to change images/image set
+
+document.getElementById("photography_menu").onclick = function(event){
+  id = event.target.id;
+  changeImages(id);
+}
+
+//change images/image set according to the button id
+function changeImages(id){
+  //show images of "Nature"
+  if(id == "btn1"){
+    img = "images1";
+    images1.style.display = "block";
+    images2.style.display = "none";
+    images3.style.display = "none";
+    images4.style.display = "none";
+    images5.style.display = "none";
+}
+  //show images of "Sports"
+  else if(id == "btn2"){
+    img = "images2";
+    images1.style.display = "none";
+    images2.style.display = "block";
+    images3.style.display = "none";
+    images4.style.display = "none";
+    images5.style.display = "none";
+}
+  //show images of "Food"
+  else if(id == "btn3"){
+    img = "images3";
+    images1.style.display = "none";
+    images2.style.display = "none";
+    images3.style.display = "block";
+    images4.style.display = "none";
+    images5.style.display = "none";
+}
+  //show images of "Pets"
+  else if(id == "btn4"){
+    img = "images4";
+    images1.style.display = "none";
+    images2.style.display = "none";
+    images3.style.display = "none";
+    images4.style.display = "block";
+    images5.style.display = "none";
+}
+  //show images of "TV shows"
+  else if(id == "btn5"){
+    img = "images5";
+    images1.style.display = "none";
+    images2.style.display = "none";
+    images3.style.display = "none";
+    images4.style.display = "none";
+    images5.style.display = "block";
+}
+}
+
+  
+var button = document.getElementById(id);
+var arrowLeft = document.getElementById("arrow-left");
+var arrowRight = document.getElementById("arrow-right");
+
+var circles = document.getElementById("buttons").getElementsByTagName("li");
+var box=document.getElementById("container");
+var currentIndex = 0;
+var preIndex = 0;
+var timer=null;
+
+arrowLeft.addEventListener("click", preMove);
+arrowRight.addEventListener("click", nextMove);
+
+for (let i = 0; i < circles.length; i++) {
+  circles[i].setAttribute("id", i);
+  circles[i].addEventListener("mouseenter", overCircle);
+}
+
+//show images automatically
+timer=setInterval(nextMove,3000);
+
+//add a mouseover event to stop the auto-display of images and show arrows
+box.addEventListener("mouseover",function() {
+  clearInterval(timer);
+  arrowLeft.style.display="block";
+  arrowRight.style.display="block";
+});
+//add a mouseout event to continue the auto-display of images
+box.addEventListener("mouseout",function() {
+  timer=setInterval(nextMove,3000);
+  arrowLeft.style.display="none";
+  arrowRight.style.display="none";
+});
+
+changeCircleColor(preIndex, currentIndex);
+
+//click circle to change image
+function overCircle() {
+  preIndex = currentIndex;
+  currentIndex = parseInt(this.id);
+  changeCircleColor(preIndex, currentIndex);
+  moveImage(img);
+}
+//bind the circle index with the image index
+function changeCircleColor(preIndex, currentIndex) {
+    circles[preIndex].style.backgroundColor = "rgb(240, 240, 240)";
+    circles[currentIndex].style.backgroundColor = "rgb(210, 105, 30)";
+}
+
+//click left arrow to show the previous image
+function preMove() {
+    preIndex = currentIndex;
+    if (currentIndex != 0) {
+        currentIndex--;
+    }
+    else {
+        currentIndex = 5;
+    }
+    changeCircleColor(preIndex, currentIndex);
+    moveImage(img);
+}
+//click right arrow to show the next image
+function nextMove() {
+    preIndex = currentIndex;
+    if (currentIndex != 5) {
+        currentIndex++;
+    }
+    else {
+        currentIndex = 0;
+    }
+    changeCircleColor(preIndex, currentIndex);
+    moveImage(img);
+}
+//move image
+function moveImage(img) {
+    multiImages = document.getElementById(img);
+    multiImages.style.left = -currentIndex * 1080 + "px";
+}
+
+
+
+// like function
+
+var obj_like = document.getElementById("like");
+    let likeArr =["like1","like2"];
+    let a = 0;
+    
+    //add a click event that changes like-icon's color and gives text information
+    obj_like.onclick = function(){
+      if(obj_like.className == "like1"){
+        a = (a+1)%2;
+        this.className = likeArr[a];
+        if(a == 1){
+            alert("Thank you!");
+        }
+      }else {
+        a = (a+1)%2;
+        this.className = likeArr[a];
+        if(a == 0){
+            alert("I will improve it!");
+        }
+      }
+    };
+
+
+// download images function
+
+var obj_save = document.getElementById("save");
+
+obj_save.addEventListener("click",function() {
+    var category = id.charAt(id.length - 1);
+    var imgIndex = (category-1)*6+ currentIndex + 1;
+    var imgURL = 'pics/' + imgIndex + '.png';
+    
+    window.location.href = imgURL + '?response-content-type=application/octet-stream'
+    console.log(imgURL);
+});
+
+</script>
+
+<!-- Close body of webpage.............................. -->
+</body>
+
+
+<!-- Close html......................................... -->
+</html>
